@@ -123,7 +123,35 @@ export const PROJECTS = {
   //   description: string
   //   tags:        string[]   — tech badges shown below the description
   //   link:        string | null   — URL for the "View Project →" button (null to hide it)
-  items: [],
+  items: [
+    {
+      title: "Simulateur V2X — SUMO",
+      description:
+        "Simulateur de mobilité urbaine conçu from scratch pour le PFE IRIT. " +
+        "Modèles de propagation LoS/NLoS, détection probabiliste d'entités et " +
+        "visualisation des probabilités de communication pour l'optimisation coopérative CAM/CPM.",
+      tags: ["Python", "SUMO", "TraCI", "V2X", "Simulation"],
+      link: "https://github.com/Omaru-S/PFE_SUMO",
+    },
+    {
+      title: "Optimisation multi-agents — MAPPO",
+      description:
+        "Module RL du PFE IRIT : implémentation MAPPO pour l'optimisation coopérative " +
+        "de la planification CAM/CPM en réseaux V2X contraints (100 agents). " +
+        "Réduction de 43,2 % du trafic réseau. Publication à MSWiM 2025.",
+      tags: ["Python", "MAPPO", "RL multi-agents", "Stable-Baselines3", "V2X"],
+      link: "https://github.com/Omaru-S/PFE_RL",
+    },
+    {
+      title: "Agrégateur d'offres d'emploi",
+      description:
+        "Pipeline Python qui interroge des APIs d'emploi (France Travail / OAuth2), " +
+        "enrichit les annonces avec un LLM local (Ollama / qwen2.5) pour extraire les champs manquants, " +
+        "filtre selon des critères de profil et sauvegarde les résultats en JSON.",
+      tags: ["Python", "LLM", "Ollama", "France Travail API", "uv"],
+      link: "https://github.com/Omaru-S/job-scraper",
+    },
+  ],
 
   // Shown when items is empty
   emptyMessage: "Projets à venir...",

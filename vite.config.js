@@ -5,12 +5,17 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   plugins: [tailwindcss(), react()],
 
+  // Vite root is src/ so src/index.html is the template and is never
+  // overwritten by build output — the built index.html goes to the repo root.
+  root: "src",
+
   // GitHub Pages serves the site at /my-portfolio/
   base: "/my-portfolio/",
 
   build: {
     // Output built files to the repo root (for gh-pages deployment)
-    outDir: ".",
+    outDir: "../",
+    // Never empty the parent dir — it contains the source files!
     emptyOutDir: false,
     rollupOptions: {
       output: {
